@@ -15,7 +15,7 @@
 import os
 import re
 import numpy as np
-from transform import build_se3_transform
+from .transform import build_se3_transform
 
 from .interpolate_poses import interpolate_vo_poses, interpolate_ins_poses
 
