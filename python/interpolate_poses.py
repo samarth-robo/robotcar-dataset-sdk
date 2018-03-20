@@ -82,6 +82,8 @@ def interpolate_ins_poses(ins_path, pose_timestamps, origin_timestamp):
         upper_timestamp = max(max(pose_timestamps), origin_timestamp)
 
         for row in ins_reader:
+            if row[1] != 'INS_SOLUTION_GOOD':
+                continue
             timestamp = int(row[0])
             ins_timestamps.append(timestamp)
 
