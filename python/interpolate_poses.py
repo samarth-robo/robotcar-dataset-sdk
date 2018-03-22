@@ -201,7 +201,7 @@ def interpolate_poses(pose_timestamps, abs_poses, requested_timestamps, origin_t
     poses_mat[0:3, 3::4] = positions_interp
     poses_mat[3, 3::4] = 1
 
-    poses_mat = np.linalg.solve(poses_mat[0:4, 0:4], poses_mat)
+    # poses_mat = np.linalg.solve(poses_mat[0:4, 0:4], poses_mat)
 
     poses_out = [0] * (len(requested_timestamps) - 1)
     for i in range(1, len(requested_timestamps)):
